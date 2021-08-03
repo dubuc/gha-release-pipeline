@@ -1,0 +1,12 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  tag_on_merge:
+    name: Tag new release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
